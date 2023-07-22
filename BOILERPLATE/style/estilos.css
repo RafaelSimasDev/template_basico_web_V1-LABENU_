@@ -1,0 +1,65 @@
+/* DEDICADO A IMPORTS */
+
+/*-----------------------------------------------------*/
+/*RESET DE CSS / DECLARAÇÃO DE VARIÁVEIS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary-color: #fbfbe0;
+  --secundary-color: #fbfbe0;
+  --gray1: #808080;
+  --gray2: #545454;
+  --gray3: #484848;
+  --pink: #d00553;
+}
+/*-----------------------------------------------------*/
+/*INICIO DO CODIGO*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------*/
+/*MEDIA QUERYES*/
+
+/*BREAKPOINTS*/
+/*CELULARES*/
+
+@media only screen and(min-device-width: 480px) {
+}
+
+/*TABLETS*/
+
+@media only screen and(min-device-width: 480px) and (max-device-width: 768px) {
+}
+
+/*MEDIUM DESKTOPS*/
+
+@media only screen and(min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/*DISPOSITIVOS ACIMA DE 1024px*/
+
+@media only screen and(min-device-width: 1024px) {
+}
