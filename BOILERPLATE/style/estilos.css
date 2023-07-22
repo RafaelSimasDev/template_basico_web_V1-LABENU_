@@ -9,6 +9,8 @@
   text-decoration: none;
   list-style: none;
   font-size: 1rem;
+  
+  /* overflow-x: hidden; */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -20,23 +22,81 @@
   --gray2: #545454;
   --gray3: #484848;
   --pink: #d00553;
+  --pink2: #ff93bc;
 }
+
+
 /*-----------------------------------------------------*/
 /*INICIO DO CODIGO*/
 
+header{
+  width: 100vw;
+  height: 12vh;
+  background-color: var(--pink2);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
+header .logo{
+  width: 8rem;
+  /* border: 1px solid rgb(0, 204, 255); */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center	;
+}
 
+header .logo h1{
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
 
+header nav{
+  /* border: 2px solid rgb(0, 204, 255); */
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+header nav .hamburguer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none;
+  /* border: 0.2px solid red; */
+}
 
+header nav .hamburguer .bar{
+  width: 100%;
+  height: 5px;
+  background-color: #fbfbe0;
+  border-radius: 12px;
+}
 
+header nav ul{
+  display: flex;
+  gap: 15px;
+  /* border: 2px solid rgb(0, 204, 255); */
+}
 
+header nav ul a{
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition-duration: 1s;
+}
 
-
-
-
-
-
+header nav ul a:hover{
+  color: var(--gray3);
+}
 
 
 
@@ -46,7 +106,55 @@
 /*BREAKPOINTS*/
 /*CELULARES*/
 
-@media only screen and(min-device-width: 480px) {
+@media (max-device-width: 480px) {
+
+  header{
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+
+  header .logo h1{
+    font-size: 1.5rem;
+  }
+
+  header nav{
+    width: 80px;
+    /* border: 1px solid red; */
+  }
+
+  header nav .hamburguer{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 30px;
+    
+  }
+
+  header nav ul{
+    visibility: hidden;
+    opacity: 0;
+    padding-top: 30px;
+    position: absolute;
+    flex-direction: column;
+     top: 12vh;
+     right: 0;
+     width: 0%;
+     height: calc(100vh - 12vh);
+     background-color: var(--gray2);
+     align-items: center;
+     gap: 50px;    
+     overflow: hidden;
+     transition-duration: 0.3s;
+  }
+
+  .active{
+    visibility: visible;
+    opacity: 1;
+    width: 50%;
+  }
+
+
 }
 
 /*TABLETS*/
